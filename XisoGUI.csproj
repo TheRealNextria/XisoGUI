@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	
+	
+	 <!-- Single-file, self-contained publish -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <IncludeNativeLibrariesForSelfExtract>false</IncludeNativeLibrariesForSelfExtract>
+    <PublishTrimmed>false</PublishTrimmed>
+	<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+  <ApplicationIcon>Assets\XisoGUI.ico</ApplicationIcon>
+  </PropertyGroup>
+</Project>
