@@ -2,7 +2,7 @@
 **A simple Windows GUI for the `extract-xiso` tool — extract and manage Xbox & Xbox 360 ISOs with ease.**
 
 ![screenshot](docs/screenshot.png)  
-*(Optional: add a screenshot of your main window here)*
+
 
 ---
 
