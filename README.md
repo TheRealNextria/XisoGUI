@@ -32,7 +32,6 @@ It automates ISO extraction, multi-disc grouping, duplicate checks, and destinat
 
 ## 🖥️ Requirements
 - Windows 10 or later  
-- [.NET 8.0 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (if not using the self-contained build)  
 - `extract-xiso.exe` (auto-download supported)
 
 ---
