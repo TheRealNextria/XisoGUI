@@ -285,8 +285,32 @@ namespace XisoGUI
                     }
 
 
-                    item.Status = exit == 0 ? "Done" : $"Failed ({exit})";
-                    UpdateItem(item);
+                    if (exit == 0)
+                    {
+                        item.Status = "Done";
+                        UpdateItem(item);
+
+                        if (chkDeleteIsoAfterSuccess.Checked)
+                        {
+                            try
+                            {
+                                File.Delete(item.Path);
+                                AppendLog($"> Deleted source ISO: {item.Path}");
+                                item.Status = "Done (ISO deleted)";
+                                UpdateItem(item);
+                            }
+                            catch (Exception ex)
+                            {
+                                AppendLog($"> WARNING: Extraction succeeded, but the source ISO could not be deleted: {item.Path}");
+                                AppendLog($"> {ex.Message}");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        item.Status = $"Failed ({exit})";
+                        UpdateItem(item);
+                    }
 
                     if (exit != 0 && !chkContinueOnError.Checked)
                         break;
@@ -507,6 +531,7 @@ namespace XisoGUI
             btnRemove.Enabled      = idle;
             btnClear.Enabled       = idle;
             if (gridOptions != null) gridOptions.Enabled = idle;
+            if (chkDeleteIsoAfterSuccess != null) chkDeleteIsoAfterSuccess.Enabled = idle;
         }
     }
 

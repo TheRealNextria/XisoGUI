@@ -27,6 +27,7 @@ private System.Windows.Forms.TextBox txtExe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOptDesc;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.CheckBox chkContinueOnError;
+        private System.Windows.Forms.CheckBox chkDeleteIsoAfterSuccess;
 
         protected override void Dispose(bool disposing)
         {
@@ -61,6 +62,7 @@ private System.Windows.Forms.TextBox txtExe;
             colOptDesc = new DataGridViewTextBoxColumn();
             lblCount = new Label();
             chkContinueOnError = new CheckBox();
+            chkDeleteIsoAfterSuccess = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)gridOptions).BeginInit();
             SuspendLayout();
             // 
@@ -277,12 +279,24 @@ private System.Windows.Forms.TextBox txtExe;
             chkContinueOnError.TabIndex = 1;
             chkContinueOnError.Text = "Continue on error";
             // 
+            // chkDeleteIsoAfterSuccess
+            // 
+            chkDeleteIsoAfterSuccess.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            chkDeleteIsoAfterSuccess.AutoSize = true;
+            chkDeleteIsoAfterSuccess.Location = new Point(358, 537);
+            chkDeleteIsoAfterSuccess.Name = "chkDeleteIsoAfterSuccess";
+            chkDeleteIsoAfterSuccess.Size = new Size(201, 19);
+            chkDeleteIsoAfterSuccess.TabIndex = 20;
+            chkDeleteIsoAfterSuccess.Text = "Delete ISO after successful extraction";
+            chkDeleteIsoAfterSuccess.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(760, 715);
             Controls.Add(lblCount);
+            Controls.Add(chkDeleteIsoAfterSuccess);
             Controls.Add(chkContinueOnError);
             Controls.Add(txtLog);
             Controls.Add(btnStop);
